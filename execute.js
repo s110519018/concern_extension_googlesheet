@@ -1,4 +1,5 @@
 const onMessage = (message) => {
+  name = message.name;
   switch (message.action) {
     case 'START':
       start(message.name,message.studentID);
@@ -44,7 +45,8 @@ function start(name,studentID){
 
 function waitSeconds(){
     // video.style.border="transparent 6px solid"
-    window.setInterval("drawPicture()",5000);
+    window.setInterval("drawPicture()",1000);
+    console.log("name:"+name);
 }
 // window.onload = waitSeconds;
 
@@ -84,7 +86,27 @@ var drawPicture=()=>{
         .then((response) => {
             console.log(response.data)
             addborder(response.data)
+            send(response.data)
         })
+        function send(number){
+          $.ajax({
+            type:"GET",
+            dataType: "jsonp",
+            jsonp: "callback", //Jquery生成驗證引數的名稱
+            // a/grad.ntue.edu.tw/
+            url: "https://script.google.com/a/grad.ntue.edu.tw/macros/s/AKfycby8KOoQDDk421wDDhiUjoDBRMJGCu8BGX6B_519cW-b3uF610ww/exec?prefix=calltest",
+            data: {
+              "name": name,
+              "number": number
+            },
+            success: function() {
+                alert("成功")
+            },
+            error: function(){
+              alert("失敗！")
+            }
+          });
+        }
 };
 
 function addborder(color_str){
@@ -109,5 +131,24 @@ function addborder(color_str){
         alert("No Face")
     }
 }
+
+// function send(number){
+//   $.ajax({
+//     dataType: "jsonp",
+//     jsonp: "callback", //Jquery生成驗證引數的名稱
+//     url: "https://script.google.com/macros/s/AKfycby8KOoQDDk421wDDhiUjoDBRMJGCu8BGX6B_519cW-b3uF610ww/exec?prefix=calltest",
+//     data: {
+//       "name": name,
+//       "number": number
+//     },
+//     success: function() {
+//         alert("成功")
+//     },
+//     error: function(){
+//       alert("失敗！")
+//     }
+//   });
+// }
+
 
 
