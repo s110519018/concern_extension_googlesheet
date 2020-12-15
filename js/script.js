@@ -6,7 +6,8 @@ var getSelectedTab = (tab) => {
     var studentID = document.getElementById("studentID");
     // console.log("name"+name.value);
     // console.log("studentID"+studentID.value);
-    sendMessage({ action: 'START' , name: name.value, studentID: studentID.value})
+    sendMessage({ action: 'START' , name: name.value, studentID: studentID.value});
+    window.close();
   });
   // document.getElementById('reset').addEventListener('click', () => sendMessage({ action: 'RESET' }));
   

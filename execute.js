@@ -20,7 +20,6 @@ function start(name,studentID){
     console.log("開始上課");
     //   console.log("name"+name);
     //   console.log("studentID"+studentID);
-  
     //抓各個視頻的名字
     var student_everyone=document.querySelectorAll(".YBp7jf")
     student_everyone.forEach(function(student){
@@ -45,7 +44,7 @@ function start(name,studentID){
 
 function waitSeconds(){
     // video.style.border="transparent 6px solid"
-    window.setInterval("drawPicture()",1000);
+    window.setInterval("drawPicture()",5000);
     console.log("name:"+name);
 }
 // window.onload = waitSeconds;

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "疫距兩得",
-  "description": "疫距兩得",
+  "name": "疫距數得_學生端",
+  "description": "疫距數得_學生端",
   "version": "1.0.0",
   "icons": {
     "16": "icon/icon.png",

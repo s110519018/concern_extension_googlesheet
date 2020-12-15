@@ -1,5 +1,43 @@
-#main {
-    width: auto;
-    margin: auto; 
-
-  }
+body{
+  text-align: center;
+}
+img{
+  display: inline-block;
+  width: 13%;
+  height: 13%;
+  margin-right: 6px;
+}
+h2{
+  display: inline-block;
+}
+.title {
+  display: flex;        
+  align-items: center;
+  justify-content: center;
+}
+input{
+  border:1px solid #5B58AD;
+  padding: 4px 2px;
+}
+#studentID{
+  margin-top: 5px;
+}
+input::placeholder {
+  color: #CDCDCD;
+  padding-left: 2px;
+}
+button{
+  background-color: #A0E557;
+  color: #000;
+  border:0;
+  border-radius: 100px;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-top: 8px;
+  outline: 0;
+  cursor: pointer;
+}
+button:focus{
+  background-color: #000;
+  color: #A0E557;
+}
