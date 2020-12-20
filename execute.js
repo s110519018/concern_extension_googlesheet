@@ -127,7 +127,9 @@ function addborder(color_str){
         }
     }
     else{
-        alert("No Face")
+        // alert("No Face")
+        video.parentElement.parentElement.style.border="6px solid red";
+
     }
 }
 
